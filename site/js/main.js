@@ -1,6 +1,6 @@
 /**
 * Inicializamos o angular.module com o mesmo nome que definimos na diretiva ng-app
-* E incluímos a dependência do ngRoute 
+* E incluímos a dependência do ngRoute
 */
 var app = angular.module('website', [
 'ngRoute'
@@ -22,6 +22,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/sobre", {templateUrl: "templates/sobre.html", controller: "SobreCtrl"})
         .when("/servicos", {templateUrl: "templates/servicos.html", controller: "ServicosCtrl"})
         .when("/precos", {templateUrl: "templates/precos.html", controller: "PrecosCtrl"})
+        .when("/contato", {templateUrl: "templates/contato.html", controller: "ContatoCtrl"})
         /* aqui você pode adicionar rotas para outras paginas que desejar criar */
         // por último dizemos se nenhuma url digitada for encontrada mostramos a página 404 que não existe no nosso servidor
         .otherwise("/404", {templateUrl: "templates/404.html"});
